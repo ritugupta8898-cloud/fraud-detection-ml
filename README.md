@@ -21,6 +21,7 @@ Because of this, **accuracy alone is meaningless**, so the project focuses on:
 - Scale `Time` and `Amount`  
 - Handle imbalance using RandomOverSampler  
 - Train Random Forest classifier  
+- Train Linear SVM (for fast & efficient fraud detection)
 - Evaluate with Accuracy, Precision, Recall, F1-score, ROC-AUC  
 - Clean, industry-standard project structure  
 
@@ -55,13 +56,53 @@ fraud-detection-ml/
 | ROC-AUC     | 0.918  |
 
 ---
-## 📉 Confusion Matrix
-<img src="reports/figures/confusion_matrix.png" width="500"/>
+## 📊 Model Performance (Linear SVM — Subset(6000) Training)
+|Metric	        |Score|
+|---------------|-----|
+|Accuracy	    |0.9993|
+|Precision	    |0.7959|
+|Recall	        |0.7959|
+|F1-Score	    |0.7959|
+|ROC-AUC	    |0.8978|
+
+---
+## 📉 Confusion Matrices
+
+### 🔷 Random Forest Confusion Matrix  
+<img src="reports/figures/confusion_rf.png" width="500"/>
+
+### 🔷 Linear SVM Confusion Matrix  
+<img src="reports/figures/confusion_svm.png" width="500"/>
 
 ---
 
-## 📈 ROC Curve
-<img src="reports/figures/roc_curve.png" width="500"/>
+## 📈 ROC Curves
+
+### 🔷 Random Forest ROC Curve  
+<img src="reports/figures/roc_rf.png" width="500"/>
+
+### 🔷 Linear SVM ROC Curve  
+<img src="reports/figures/roc_svm.png" width="500"/>
+---
+
+### 🔥 Model Comparison Summary
+
+Fraud detection prioritizes **catching more fraud cases (higher Recall)** because missing a fraud is more costly than a false alert.
+
+| Model | Strength | Why it matters |
+|---|---|---|
+| **Random Forest** | Detects more fraud cases | Higher Recall + AUC → catches more fraudulent transactions |
+| **Linear SVM** | Gives fewer false alarms | Higher Precision + F1-score → predictions are more reliable |
+
+---
+
+### 🏁 Final Conclusion
+
+**Random Forest is more suitable for fraud detection** in this dataset  
+because it identifies more fraudulent transactions overall.
+
+**Linear SVM is still useful** as a lighter model with fewer false positives.
+
 ---
 ## 🛠️ How to Run
 
