@@ -1,10 +1,10 @@
-# 🛡️ Credit Card Fraud Detection — Machine Learning Project
+#  Credit Card Fraud Detection — Machine Learning Project
 
 This project builds a complete Machine Learning pipeline to detect fraudulent credit card transactions using a real-world dataset. It includes data preprocessing, oversampling, model training, evaluation, and visualization.
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 Credit card fraud is rare (0.17% cases), making this an **imbalanced classification** problem.  
 Because of this, **accuracy alone is meaningless**, so the project focuses on:
@@ -15,7 +15,7 @@ Because of this, **accuracy alone is meaningless**, so the project focuses on:
 
 ---
 
-## 🚀 Features Implemented
+##  Features Implemented
 
 - Load and preprocess dataset  
 - Scale `Time` and `Amount`  
@@ -27,7 +27,7 @@ Because of this, **accuracy alone is meaningless**, so the project focuses on:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 fraud-detection-ml/
@@ -45,7 +45,7 @@ fraud-detection-ml/
 
 ---
 
-## 📊 Model Performance (Random Forest)
+## Model Performance (Random Forest)
 
 | Metric      | Score |
 |-------------|--------|
@@ -56,7 +56,7 @@ fraud-detection-ml/
 | ROC-AUC     | 0.918  |
 
 ---
-## 📊 Model Performance (Linear SVM — Subset(6000) Training)
+## Model Performance (Linear SVM — Subset(6000) Training)
 |Metric	        |Score|
 |---------------|-----|
 |Accuracy	    |0.9993|
@@ -66,7 +66,7 @@ fraud-detection-ml/
 |ROC-AUC	    |0.8978|
 
 ---
-## 📉 Confusion Matrices
+##  Confusion Matrices
 
 ### 🔷 Random Forest Confusion Matrix  
 <img src="reports/figures/confusion_matrix.png" width="500"/>
@@ -76,7 +76,7 @@ fraud-detection-ml/
 
 ---
 
-## 📈 ROC Curves
+## ROC Curves
 
 ### 🔷 Random Forest ROC Curve  
 <img src="reports/figures/roc_curve.png" width="500"/>
@@ -85,7 +85,7 @@ fraud-detection-ml/
 <img src="reports/figures/roc_svm.png" width="500"/>
 ---
 
-### 🔥 Model Comparison Summary
+###  Model Comparison Summary
 
 Fraud detection prioritizes **catching more fraud cases (higher Recall)** because missing a fraud is more costly than a false alert.
 
@@ -104,7 +104,7 @@ because it identifies more fraudulent transactions overall.
 **Linear SVM is still useful** as a lighter model with fewer false positives.
 
 ---
-## 🛠️ How to Run
+##  How to Run
 
 ```bash
 pip install -r requirements.txt
@@ -113,14 +113,14 @@ python3 run.py
 
 ---
 
-## 📦 Dataset
+##  Dataset
 
 **Kaggle: Credit Card Fraud Detection**  
 https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
  
 - XGBoost & LightGBM models  
 - Save best model (`best_model.pkl`)  
@@ -130,7 +130,7 @@ https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 
 ---
 
-## 👨‍💻 Author
+## 👨 Author
 
 **Pratyush Gupta**  
 GitHub: https://github.com/rituGupta8898-cloud
